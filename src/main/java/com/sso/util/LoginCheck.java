@@ -10,13 +10,9 @@ import javax.servlet.http.HttpServletRequest;
  *
  */
 public class LoginCheck {
-    /** 测试用户名 */
     public static final String USERNAME="user";
-    /** 测试密码*/
     public static final String PASSWORD="123";
-    /** Cookie键 */
     public static final String COOKIE_NAME = "ssocookie";
-    /** Cookie值*/
     public static final String COOKIE_VALUE = "sso";
 	public static boolean checkLogin(String username,String password){
 		if (USERNAME.equalsIgnoreCase(username)&&PASSWORD.equalsIgnoreCase(password)) {

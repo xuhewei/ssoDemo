@@ -30,7 +30,7 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     PageContext _jspx_page_context = null;
 
     try {
-      response.setContentType("text/html");
+      response.setContentType("text/html; charset=utf-8");
       pageContext = _jspxFactory.getPageContext(this, request, response,
       			null, true, 8192, true);
       _jspx_page_context = pageContext;
@@ -41,23 +41,24 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("<!DOCTYPE html>\r\n");
+      out.write("\r\n");
+      out.write("<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
-      out.write("<meta charset=\"UTF-8\">\r\n");
-      out.write("<title>ç»å½</title>\r\n");
+      out.write("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n");
+      out.write("<title>Insert title here</title>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("<center>\r\n");
-      out.write("    <h1>è¯·ç»å½</h1>\r\n");
-      out.write("    <form action=\"/sso/doLogin\" method=\"post\">\r\n");
-      out.write("        <input type=\"hidden\" name=\"gotoUrl\" value=\"");
+      out.write("\t<h1>请登录</h1>\r\n");
+      out.write("\t<form action=\"/sso/doLogin\" method=\"post\">\r\n");
+      out.write("\t\t<input type=\"text\" name=\"gotoUrl\" value=\"");
       out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${gotoUrl}", java.lang.String.class, (PageContext)_jspx_page_context, null));
       out.write("\"/>\r\n");
-      out.write("        <span>ç¨æ·åï¼</span><input type=\"text\" name=\"username\"/>\r\n");
-      out.write("        <span>å¯ç ï¼</span><input type=\"password\" name=\"password\"/>\r\n");
-      out.write("        <input type=\"submit\">\r\n");
-      out.write("    </form>\r\n");
+      out.write("\t\t<span>用户名：</span><input type=\"text\" name=\"username\"/><br>\r\n");
+      out.write("\t\t<span>密码：</span><input type=\"text\" name=\"password\"/><br>\r\n");
+      out.write("\t\t<input type=\"submit\"><br>\r\n");
+      out.write("\t</form>\r\n");
       out.write("</center>\r\n");
       out.write("</body>\r\n");
       out.write("</html>");
